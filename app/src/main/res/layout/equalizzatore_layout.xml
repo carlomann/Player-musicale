@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1">
+    <Spinner
+        android:id="@+id/eq_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </Spinner>
+</RelativeLayout>
+    <LinearLayout
+        android:orientation= "horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Low"
+            android:textColor="@color/white">
+
+        </TextView>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Low-mid"
+            android:textColor="@color/white">
+
+        </TextView>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Hi-mid"
+            android:textColor="@color/white">
+
+        </TextView>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="High"
+            android:textColor="@color/white">
+
+        </TextView>
+
+    </LinearLayout>
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="0dp"
+       android:layout_weight="7"
+       android:orientation="horizontal">
+
+       <FrameLayout
+           android:layout_width="0dp"
+           android:layout_height="match_parent"
+           android:layout_weight="1"
+           >
+
+           <SeekBar
+               android:id="@+id/seekBar80"
+               android:layout_width="300dp"
+               android:layout_height="wrap_content"
+               android:backgroundTint="#fff"
+               android:progressTint="#fff"
+               android:rotation="-90"
+               android:thumbTint="#fff"
+               android:layout_marginLeft="26dp"
+               android:layout_marginBottom="150dp"
+               android:transformPivotX="16dp"
+               android:layout_gravity="bottom"
+               android:min="0"
+               android:max="100"
+               >
+
+           </SeekBar>
+       </FrameLayout>
+
+       <FrameLayout
+           android:layout_width="0dp"
+           android:layout_height="match_parent"
+           android:layout_weight="1">
+
+           <SeekBar
+               android:id="@+id/seekBar160"
+               android:layout_width="300dp"
+               android:layout_height="wrap_content"
+               android:backgroundTint="#fff"
+               android:progressTint="#fff"
+               android:rotation="-90"
+               android:thumbTint="#fff"
+               android:layout_marginLeft="26dp"
+               android:layout_marginBottom="150dp"
+               android:transformPivotX="16dp"
+               android:layout_gravity="bottom"
+               android:min="0"
+               android:max="100">
+
+           </SeekBar>
+       </FrameLayout>
+       <FrameLayout
+           android:layout_width="0dp"
+           android:layout_height="match_parent"
+           android:layout_weight="1">
+
+           <SeekBar
+               android:id="@+id/seekBar240"
+               android:layout_width="300dp"
+               android:layout_height="wrap_content"
+               android:backgroundTint="#fff"
+               android:progressTint="#fff"
+               android:rotation="-90"
+               android:thumbTint="#fff"
+               android:layout_marginLeft="26dp"
+               android:layout_marginBottom="150dp"
+               android:transformPivotX="16dp"
+               android:layout_gravity="bottom"
+               android:min="0"
+               android:max="100">
+
+           </SeekBar>
+       </FrameLayout>
+       <FrameLayout
+           android:layout_width="0dp"
+           android:layout_height="match_parent"
+           android:layout_weight="1">
+
+           <SeekBar
+               android:id="@+id/seekBar320"
+               android:layout_width="300dp"
+               android:layout_height="wrap_content"
+               android:backgroundTint="#fff"
+               android:progressTint="#fff"
+               android:rotation="-90"
+               android:thumbTint="#fff"
+               android:layout_marginLeft="26dp"
+               android:layout_marginBottom="150dp"
+               android:transformPivotX="16dp"
+               android:layout_gravity="bottom"
+               android:min="0"
+               android:max="100">
+
+           </SeekBar>
+       </FrameLayout>
+
+   </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Eq_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/Eq_reset"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="8dp"
+            android:backgroundTint="#61512424"
+            android:drawableLeft="@drawable/clockwise_evensmaller"
+            android:paddingLeft="26dp"
+            >
+        </Button>
+        <Button
+            android:id="@+id/Eq_delete"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="8dp"
+            android:backgroundTint="#61512424"
+            android:drawableLeft="@drawable/rubbish_smaller"
+            android:paddingLeft="28dp"
+            >
+        </Button>
+        <Button
+            android:id="@+id/Eq_update"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="8dp"
+            android:backgroundTint="#61512424"
+            android:drawableLeft="@drawable/check_smaller"
+            android:paddingLeft="28dp"
+            >
+        </Button>
+        <Button
+            android:id="@+id/Eq_create"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="8dp"
+            android:backgroundTint="#61512424"
+            android:drawableLeft="@drawable/add_smaller"
+            android:paddingLeft="27dp"
+            >
+        </Button>
+
+    </LinearLayout>
+    
+    
+</LinearLayout>
+
+
+

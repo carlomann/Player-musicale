@@ -3,11 +3,14 @@ package com.example.musicplayer;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -147,7 +150,14 @@ public class MusicPlayerActivity extends AppCompatActivity implements View.OnCli
             }
         }).start();
 
-    } // end main
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.music_player_activity_menu, menu);
+        return true;
+    }
 
     public String millisecondsToString(int time) {
         String elapsedTime = "";
@@ -180,13 +190,17 @@ public class MusicPlayerActivity extends AppCompatActivity implements View.OnCli
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        if(item.getItemId() == android.R.id.home) {
+        int id = item.getItemId();
+        if(id == R.id.eq_activity_button) {
+            Intent eq_activity = new Intent(this, Equalizzatore.class);
+            startActivity(eq_activity);
+            return true;
+           } else if (id == android.R.id.home) {
             finish();
             if(musicPlayer.isPlaying()) {
                 musicPlayer.stop();
-            }
-        }
-        return super.onOptionsItemSelected(item);
+            } return true;
+               } else return super.onOptionsItemSelected(item);
     }
 
     private int getStatusBarColor() {
